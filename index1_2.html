@@ -1,0 +1,21 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript для початківців</title>
+    </head>
+    <body>
+        <img src="images/image1.jpg" alt="Аршин" id="image" onclick="changeImage()">
+        <script>
+            function changeImage() { /* При клікі виклик. функція changeImage, яка міняє картинку на іншу */
+                var image = document.getElementById('image'); /* Змінна з ідент. image */
+                
+                if (image.src.match("image1")) {
+                    image.src = "images/image2.jpg";
+                } else {
+                    image.src = "images/image1.jpg";
+                }
+            }
+        </script>
+    </body>
+</html>

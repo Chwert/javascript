@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript для початківців</title>
+    </head>
+    <body>
+        <p >Введіть число від 1 до 99:</p>
+        
+        <input type="text" id="number">
+        
+        <button type="button" onclick="myFunction()">Перевірити</button>
+        
+        <p id="result"></p>
+        
+        <script>
+           function myFunction() { /* При нажатті на кнопку перевірити виклик. функція myFunction, яка перевіряє діапазон                               введеного числа від одного до 99 і чи це є число (isNaN(number)), потім в елемент з                               ідент. result виводиться результат */
+               var number, result;
+               
+               number = document.getElementById('number').value;
+               
+               if (isNaN(number) || number < 1 || number > 99) {
+                   result = 'Число невірне';
+               } else {
+                   result = 'Число вірне';
+               }
+               
+               document.getElementById('result').innerHTML = result;
+           }
+        </script>
+    </body>
+</html>
