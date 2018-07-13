@@ -1,0 +1,46 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript для початківців</title>
+    </head>
+    <body>
+        <script>
+            var numberType = 56;//числова змінна
+            var stringType = 'Строка';//строкова змінна
+            x = numberType + numberType + stringType;//тут спочатку додаються числа, а потім приєднується строка - 112строка
+            console.log(x);
+            x = stringType + numberType + numberType;//якщо до строки додаються числа то вони також будуть строками -                                                    Строка5656
+            console.log(x);
+            var comp = 'Компанія "Браво"';//повинні бути різні кавички, щоб не було помилки
+            console.log(comp);
+            var arrayType = ['Саша','Маша','Даша','Катя'];
+            console.log(arrayType[0]);
+            var objecttype = {age: 14, sex: 'female', name: 'Анна'};//тип обєкт складається з ключа і значення
+            console.log(objecttype.age);//звернення до обєкту з ключем age
+            var booleantype = false;//логічний тип
+            
+           /* if(booleantype)
+            {
+              alert(true); 
+               }
+            else
+            {
+                alert(false);
+            }*/
+            var nullType = null;// тип нуль
+            console.log(nullType);
+            
+            var undefinedType = undefined;
+            
+            if(nullType === undefinedType)
+            {
+                alert(true); 
+            }
+            else
+            {
+                alert(false);
+            }
+        </script>
+    </body>
+</html>
