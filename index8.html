@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Функції</title>
+</head>
+<body>
+  <input type="text" name="length" id="length" placeholder="Довжина">  
+  <input type="text" name="width" id="width" placeholder="Ширина">  
+  <input type="text" name="height" id="height" placeholder="Висота">
+  <input type="button" id="calculate" onclick="volumeResult()" value="Розрахувати об'єм">
+  <br>
+  <p id="result"></p>
+  
+    <script>
+        
+        function volumeResult()
+        {
+            var length = document.getElementById('length').value;
+            var width = document.getElementById('width').value;
+            var height = document.getElementById('height').value;
+            
+            document.getElementById('result').innerHTML = 'Обєм рівний: ' + calculateSize(length, width, height) + ' м<sup>3</sup>';
+        }
+        
+        function calculateSize(length, width, height)
+        {
+          return length * width * height; //return Повертає значення функції  
+        }
+        
+    </script>     
+</body>
+</html>
