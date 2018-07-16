@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Обєкти в javascript</title>
+</head>
+<body>
+   <script>
+       
+       var user, user2;
+       
+       user = { //Запис об'єкта, рекомендується цей спосіб
+           firstName: "Олександр",
+           lastName: "Мороз",
+           age: 32,
+           sex: "Чоловічий",
+           fullName: function() { // Створюєм метод для об'єкта
+               return this.firstName + ' ' + this.lastName; //this - Посилання на свойство об'єкта, return - првертає                                                      //значення свойств об'єкта 
+           }
+       };
+       
+    /*   user2 = new Object({ //Ще один спосіб запису об'єкта
+           firstName: "Євгеній",
+           lastName: "Мороз",
+           age: 30,
+           sex: "Чоловічий",
+           fullName: function() { // Створюєм метод для об'єкта
+               return this.firstName + ' ' + this.lastName; //this - Посилання на свойство об'єкта, return - првертає                                                    //значення свойств об'єкта 
+           }
+               
+       });*/
+       
+       //console.log(user.sex);
+       
+      // user2 = new String("Микола");//Строка теж може бути об'єктом, але краще стандартно
+         user2 = "Микола";
+       
+       console.log(user2);//Викликаєм fullName
+    
+   </script> 
+</body>
+</html>
