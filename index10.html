@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Область видимості (Scope)</title>
+</head>
+<body>
+    <script>
+    
+        var testVar = 200;//Глобальна змынна, до неї можна звернутись з любого місця скрипта
+        
+        function testFunction() {
+            var testVar = 100;//якщо без var, то змінна стає глобальною і перевизначає ту що вище, але краще з var
+        }
+        
+        var testObject = { //Обєкт
+            run : function() {
+                console.log('Метод обєкта');
+            }
+        }
+        
+        //testObject.run();//Звернення до обєкта
+        
+        window.testObject.run();//Теж визов обєкта
+        
+        
+        //console.log(testVar);//дасть testVar is not defind, тому що змінна локальна і поза функцією її немає
+        //змінну testVar можна побачити, якщо console внести в функцію, а потім функцію викликати глобально
+        //console.log(testVar2);
+    
+    </script>
+</body>
+</html>
