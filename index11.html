@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Строки и методы строк</title>
+    </head>
+    <body>
+        <script>
+            
+            //Строковий примітив і обєкт
+            var v1 = '10 + 15'; //строчний примітив
+            var v2 = new String('10 + 15'); //строчний обєкт
+            
+            console.log(eval(v1));//будуть різні значення, v1-число, v2-строка
+            console.log(eval(v2.valueOf()));//якщо так теж буде число
+            
+            if('a' > 'b') {
+                console.log('a');
+            } else {
+                console.log('b');
+            } //буде  b > a тому що в unicode b має більше числове значення (дивись нижче),  
+              //верхній регістр менше по значенню за нижній, тобто if('a' > 'B') a буде більше    
+            console.log('ab'.charCodeAt(0));//a = 97
+            console.log('ab'.charCodeAt(1));//b = 98
+            
+            //робимо із строки масив
+            
+            var StringToArray = '1,2,3,4,5,6,7';
+            
+            var ArrayString = StringToArray.split(',');
+            
+            console.log(ArrayString);
+            
+            var TrimVar = '   wer we   ';
+            
+            console.log(TrimVar.trim());//убирає пробіли до і після тексту (буде 'wer we')
+            
+        </script>
+    </body>
+</html>
