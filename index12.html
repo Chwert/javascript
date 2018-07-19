@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Числа</title>
+</head>
+<body>
+   <script>
+    
+        var i = 999999999999999;//javascript буде коректно виводити не більше ніж 15 значні числа
+        var j = 9999999999999999;
+
+        console.log(i);//буде 999999999999999
+        console.log(j);//буде 10000000000000000
+       
+       console.log(0.1 + 0.2 === 0.3);//із - за погрішностей буде > 0.3
+       console.log( ( 0.1*10 + 0.2*10 ) / 10 === 0.3);//отак буде правильний результат
+       
+       console.log(0xFF);//виведе число в 16 ричній системі
+       
+       console.log(0xFF.toString(2));//переводить число з 16 ричної в двійкову систему
+       
+       console.log(10/0);//infinity
+       console.log(-10/0);//-infinity
+       
+       console.log(10/'tr');//NaN будь-яка операція числа з NaN дає NaN
+       
+       console.log((10/'tr') + '11');//NaN + строка буде конкатенація тобто NaN11
+       
+       var k = 12.345;
+       
+       console.log(k.toFixed(2));//виводить 2 знаки після крапки і округляє
+       console.log(k.toFixed(5));//виводить 5 знаків, якщо їх не має добавляє нулі
+       
+       
+       
+       
+       
+       
+       
+    </script>    
+    
+</body>
+</html>
